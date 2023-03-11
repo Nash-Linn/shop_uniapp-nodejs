@@ -3,55 +3,51 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "百年奥莱",
+				"navigationBarTitleText": "Nash Supermarket",
 				"navigationBarBackgroundColor": "#fff",
-				"navigationStyle": "custom",
-				"app-plus":{
-						"titleNView":{
-							"buttons":[
-								{
-									"float":"left",
-									"fontSrc":"./static/iconfont.ttf",
-									"text":"\ue662"
-								},
-								{
-									"float":"right",
-									"fontSrc":"./static/iconfont.ttf",
-									"text":"\ue86f"
-								}
-							]
-						}
+				// "navigationStyle": "custom",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"titleNView": {
+						"buttons": [{
+								"float": "left",
+								"fontSrc": "./static/iconfont.ttf",
+								"text": "\ue662"
+							},
+							{
+								"float": "right",
+								"fontSrc": "./static/iconfont.ttf",
+								"text": "\ue86f"
+							}
+						]
 					}
 				}
-			},
-	    {
-            "path" : "pages/list/list",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/shopcar/shopcar",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        },
+			}
+		},
 		{
-		    "path" : "pages/my/my",
-		    "style" :                                                                                    
-		    {
-		        "navigationBarTitleText": "",
-		        "enablePullDownRefresh": false
-		    }
-		    
+			"path": "pages/list/list",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/shopcar/shopcar",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
 		}
-    ],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
@@ -64,30 +60,30 @@
 		"selectedColor": "#2C2C2C",
 		"borderStyle": "black",
 		"backgroundColor": "#ffffff",
-		"list": [
-		{
-			"pagePath": "pages/index/index",
-			"iconPath": "static/tabbar/index.png",
-			"selectedIconPath": "static/tabbar/indexSelect.png",
-			"text": "首页"
-		},  
-		{
-			"pagePath": "pages/list/list",
-			"iconPath": "static/tabbar/list.png",
-			"selectedIconPath": "static/tabbar/listSelect.png",
-			"text": "分类"
-		}, 
-		{
-			"pagePath": "pages/shopcar/shopcar",
-			"iconPath": "static/tabbar/car.png",
-			"selectedIconPath": "static/tabbar/carSelect.png",
-			"text": "购物车"
-		}, 
-		{
-			"pagePath": "pages/my/my",
-			"iconPath": "static/tabbar/my.png",
-			"selectedIconPath": "static/tabbar/mySelect.png",
-			"text": "我的"
-		}]
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tabbar/index.png",
+				"selectedIconPath": "static/tabbar/indexSelect.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/list/list",
+				"iconPath": "static/tabbar/list.png",
+				"selectedIconPath": "static/tabbar/listSelect.png",
+				"text": "分类"
+			},
+			{
+				"pagePath": "pages/shopcar/shopcar",
+				"iconPath": "static/tabbar/car.png",
+				"selectedIconPath": "static/tabbar/carSelect.png",
+				"text": "购物车"
+			},
+			{
+				"pagePath": "pages/my/my",
+				"iconPath": "static/tabbar/my.png",
+				"selectedIconPath": "static/tabbar/mySelect.png",
+				"text": "我的"
+			}
+		]
 	}
 }

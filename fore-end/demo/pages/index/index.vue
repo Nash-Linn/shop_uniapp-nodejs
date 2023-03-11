@@ -1,43 +1,54 @@
 <template>
+
 	<view class="index">
-		
-		<view class="status_bar"></view>
-		<uni-nav-bar title="导航栏组件"></uni-nav-bar>
-		
-		<view class="f-active-color">文字1</view>
-		<view >
-			<span class="iconfont icon-fangdajing"></span>
-		</view>
+
+		<!-- 推荐模板 -->
+		<!-- <IndexSwiper />
+		<Recommend />
+		<Card cardTitle="猜你喜欢" />
+		<Card cardTitle="商品店铺" />
+		<Card cardTitle="运动户外" />
+		<CommodityList /> -->
+
+		<!-- 其他模板：运动户外、美妆... -->
+		<Banner />
+		<Icons />
+		<Card cardTitle="热销爆品" />
+		<Hot />
+		<Card cardTitle="推荐店铺" />
+		<Shop />
+		<Card cardTitle="为您推荐" />
+		<CommodityList />
+
 	</view>
+
+
 </template>
 
-<script>
-	export default {
-		data() {
-			return {
-				title: 'Hello'
-			}
-		},
-		onLoad() {
+<script setup lang="ts">
+	import Banner from '@/components/index/Banner.vue';
+	import Icons from '@/components/index/Icons.vue';
+	import Hot from '@/components/index/Hot.vue';
+	import Shop from '@/components/index/Shop.vue';
 
-		},
-		methods: {
-
-		}
-	}
+	import IndexSwiper from '@/components/index/IndexSwiper.vue';
+	import Recommend from '@/components/index/Recommend.vue';
+	import Card from '@/components/common/Card.vue';
+	import CommodityList from '@/components/common/CommodityList.vue';
 </script>
 
 <style scoped>
-.status_bar {
-	height: var(--status-bar-height);
-	width: 100%;
-}
-.wx-nav{
-	height: 200rpx;
-	width: 100%;
-	font-weight: bold;
-	line-height: 200rpx;
-	display: flex;
-	justify-content: center;
-}
+	::-webkit-scrollbar {
+		display: none;
+		width: 0 !important;
+		height: 0 !important;
+		-webkit-appearance: none;
+		background: transparent;
+	}
+
+	.palceholder {
+		margin-bottom: 20rpx;
+		height: 50rpx;
+		width: 100%;
+	}
 </style>
