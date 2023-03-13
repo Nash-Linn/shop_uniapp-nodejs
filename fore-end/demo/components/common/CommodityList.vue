@@ -1,69 +1,25 @@
 <template>
-	<view class="commodity-list"><Commodity :dataList="commodityList"></Commodity></view>
+
+	<view class="commodity-list">
+		<Commodity :dataList="props.dataList"></Commodity>
+	</view>
 </template>
 
 <script setup lang="ts">
-import Commodity from './Commodity.vue';
+	import Commodity from './Commodity.vue';
 
-interface DataList {
-	id: number;
-	imgUrl: string;
-	name: string;
-	pprice: string;
-	oprice: string;
-	discount: string;
-}
-
-const commodityList: DataList[] = [
-	{
-		id: 1,
-		imgUrl: '../../static/img/commodity1.jpg',
-		name: '入口即化，松软可口，隔壁小孩都馋哭了，门店招牌',
-		pprice: '￥299',
-		oprice: '￥599',
-		discount: '4.9折'
-	},
-	{
-		id: 2,
-		imgUrl: '../../static/img/commodity2.jpg',
-		name: '入口即化，松软可口，隔壁小孩都馋哭了，门店招牌',
-		pprice: '￥299',
-		oprice: '￥599',
-		discount: '4.9折'
-	},
-	{
-		id: 3,
-		imgUrl: '../../static/img/commodity3.jpg',
-		name: '入口即化，松软可口，隔壁小孩都馋哭了，门店招牌',
-		pprice: '￥299',
-		oprice: '￥599',
-		discount: '4.9折'
-	},
-	{
-		id: 4,
-		imgUrl: '../../static/img/commodity4.jpg',
-		name: '入口即化，松软可口，隔壁小孩都馋哭了，门店招牌',
-		pprice: '￥299',
-		oprice: '￥599',
-		discount: '4.9折'
-	},
-	{
-		id: 5,
-		imgUrl: '../../static/img/commodity5.jpg',
-		name: '入口即化，松软可口，隔壁小孩都馋哭了，门店招牌',
-		pprice: '￥299',
-		oprice: '￥599',
-		discount: '4.9折'
-	},
-	{
-		id: 6,
-		imgUrl: '../../static/img/commodity6.jpg',
-		name: '入口即化，松软可口，隔壁小孩都馋哭了，门店招牌',
-		pprice: '￥299',
-		oprice: '￥599',
-		discount: '4.9折'
+	interface DataList {
+		id: number;
+		imgUrl: string;
+		name: string;
+		pprice: string;
+		oprice: string;
+		discount: string;
 	}
-];
+	const props = withDefaults(defineProps < {
+			dataList: DataList[]
+		} >
+		(), {})
 </script>
 
 <style scoped lang="scss"></style>
